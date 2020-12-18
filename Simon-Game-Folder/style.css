@@ -1,0 +1,115 @@
+html, body {
+    background-color:black;
+    /* margin: 0 auto; */
+    height: 1000px;
+    width: 1000px;
+    background-position: relative; 
+  }
+  
+  button{
+      cursor: pointer;
+  }
+  h1{
+      color: white;
+      font-size: 100px;
+      position: relative;
+      padding-top: 50px;
+      text-align: center;
+      font-family: "Anton", sans-serif;
+      letter-spacing: 20px;
+      margin: 0 auto;
+      padding-left: 290px;
+      display: none;
+  }
+  #begin{
+      height: 120px;
+      width: 280px;
+      border-radius: 60px 60px 150px 150px;
+      color: black;
+      background-color: silver;
+      font-size: 20px;
+      position:relative;
+      margin-left: 482px;
+      margin-top: 80px;
+      border: 1px solid white;
+      box-shadow: white 0px 10px 10px 10px;
+  }
+  button:hover{
+      border:  10px solid white;
+      box-shadow: inset white 60px 0px 40px 20px;
+      box-sizing: border-box;
+       
+  }
+  /* .active{
+      background-color: white; */
+  
+  /* } */
+  #redBtn {
+    height: 197px;
+    width: 200px;
+    background-color: red;
+    border-radius: 0px 200px 0px 0px;
+    margin-left: 10px;
+    position: sticky;
+    box-shadow: white 0px 0px 10px 8px; 
+  
+  }
+  #blueBtn {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    border-radius: 0px 0px 205px 0px;
+    margin-bottom: 500px;
+    margin-left: 10px;
+    position: sticky;
+    margin-top: 10px;
+    box-shadow: white 0px 0px 10px 8px;
+  
+  
+  }
+  #yellowBtn {
+    height: 197px;
+    width: 200px;
+    background-color:yellow;
+    border-radius: 205px 0px 0px 0px;
+    margin-left: 33vw;
+    position:sticky;
+    box-shadow: white 0px 0px 10px 8px; 
+  }
+  #greenBtn {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(26, 141, 26);
+    border-radius: 0px 0px 0px 205px;
+    margin-top: -100px;
+    margin-left: 33vw;
+    position: sticky;
+    box-shadow: white 0px 0px 10px 8px;
+  }
+  #simoncirc {
+    height: 170px;
+    width: 180px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    margin-top: 120px;
+    margin-left: 60vw;
+    position: absolute;
+    box-shadow: 0px 0px 0px 0px;
+    z-index: 1;
+    font-size: 40px;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 5px;
+    line-height: 17px;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: white 0px 0px 10px 8px;
+  }
+  #button-container{
+      align-items: center;
+      height:420px;;
+      width: 100vw;
+      padding-top: 50px;
+      position: sticky;
+  }
+  
