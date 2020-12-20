@@ -57,22 +57,37 @@ document.querySelector("#begin").onclick = function (e){
     const randomColor = buttons[Math.floor(Math.random(buttons.value)* buttons.length)];
     computer.colorPicked = randomColor.value
     console.log("the computer picked " + randomColor.value) 
-
-for (i of allButtons) {
-  i.addEventListener("click", function (e) {
-    alert("clicked!");
-    if(colorPicked.value == 1){
+    if(randomColor.value == 1){
         document.querySelector("#redBtn").style.backgroundColor ="white";
         console.log("the computer picked red!")
-    }else if(colorPicked.value == 2){
+    }else if(randomColor.value == 2){
+        document.querySelector("#yellowBtn").style.backgroundColor ="white"
         console.log("the computer picked yellow!")
-        }else if(colorPicked.value == 3){
+    }else if(randomColor.value == 3){
+        document.querySelector("#blueBtn").style.backgroundColor ="white"
             console.log("the computer picked blue!")
-        }else if(colorPicked.value ==4){
+    }else if(randomColor.value ==4){
+        document.querySelector("#greenBtn").style.backgroundColor ="white"
             console.log("the computer picked green!")
-        }
-    });
-}}
+    }
+} 
+
+
+// for (i of allButtons) {
+//   i.addEventListener("click", function (e) {
+//     alert("clicked!");
+//     if(randomColor.value == 1){
+//         document.querySelector("#redBtn").style.backgroundColor ="white";
+//         console.log("the computer picked red!")
+//     }else if(randomColor.value == 2){
+//         console.log("the computer picked yellow!")
+//         }else if(randomColor.value == 3){
+//             console.log("the computer picked blue!")
+//         }else if(randomColor.value ==4){
+//             console.log("the computer picked green!")
+//         }
+//     });
+// }
         
     // redBtn.style.backgroundColor = "white";
     // document.querySelector(allButtons).style.backgroundColor = "white"
