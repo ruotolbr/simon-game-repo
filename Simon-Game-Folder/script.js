@@ -1,59 +1,96 @@
 // console.log("test")
-let redBtn = document.querySelector("#redBtn");
+const redBtn = document.querySelector("#redBtn");
+
 // redBtn.addEventListener("click", clickRed)
 // console.log(redBtn)
-let yellowBtn = document.querySelector("#yellowBtn");
+const yellowBtn = document.querySelector("#yellowBtn");
 // yellowBtn.addEventListener("click", clickYellow)
 // console.log(yellowBtn)
-let blueBtn = document.querySelector("#blueBtn");
+const blueBtn = document.querySelector("#blueBtn");
 // blueBtn.addEventListener("click", clickBlue)
 // console.log(blueBtn)
-let greenBtn = document.querySelector("#greenBtn");
+const greenBtn = document.querySelector("#greenBtn");
 // greenBtn.addEventListener("click", clickGreen)
 // console.log(greenBtn);
-let allButtons = document.querySelectorAll(".button");
+const allButtons = document.querySelectorAll(".button");
 
 const startLevel = document.querySelector("#begin");
-redBtn = 1;
-yellowBtn = 2;
-blueBtn = 3;
-greenBtn = 4;
-const buttons = [redBtn, yellowBtn, blueBtn, greenBtn];
-startLevel.addEventListener("click", function () {
-//   alert("begin!");
-  document.getElementById("start").style.color = "white";
-});
-
-for (i of allButtons) {
-  i.addEventListener("click", function () {
-    alert("clicked!");
-    document.getElementsByClassName(".buttons").style.backgroundColor = "white";
-    console.log("function working!");
-    return colorRandomizer();
-  });
+// redBtn = 1;
+// yellowBtn = 2;
+// blueBtn = 3;
+// greenBtn = 4;
+const player = {
+    colorPicked: null
 }
-function factorial(color){
-    if(color == 1 || color == 2 || color == 3 || color == 4)
-        return colorRandomizer(color)
-    } 
+const computer = {
+    colorPicked : null
+}
+
+// startLevel.addEventListener("click", function () {
+// //   alert("begin!");
+//   const buttons = [redBtn, yellowBtn, blueBtn, greenBtn];
+//   document.querySelector("#start").style.color = "white";
+//   const randomColor = buttons[Math.floor(Math.random()* buttons.length)];
+//   computer.colorPicked = buttons[randomColor]; 
+//   console.log("the computer picked " + computer.randomColor)
+// });
+// startLevel.addEventListener("click", function () {
+//     //   alert("begin!");
+//       const buttons = [redBtn, yellowBtn, blueBtn, greenBtn];
+//       document.querySelector("#start").style.color = "white";
+//       const randomColor = buttons[Math.floor(Math.random()* buttons.length)];
+//       computer.colorPicked = buttons[randomColor]; 
+//       console.log("the computer picked " + computer.randomColor)
+//     });
+const buttons = [redBtn, yellowBtn, blueBtn, greenBtn];
+console.log(buttons[0])
+buttons[0].value = 1
+buttons[1].value = 2
+buttons[2].value = 3
+buttons[3].value = 4
+console.log(Math.floor(Math.random()* buttons.length))
+const randomColor = buttons[Math.floor(Math.random(buttons.value)* buttons.length)];
+//Keep this ^^^ On page refresh the computer is selecting random values from buttons array! Yay :)
+document.querySelector("#begin").onclick = function (e){
+    console.log(e.target)
+for (i of allButtons) {
+//   i.addEventListener("click", function (e) {
+//     alert("clicked!");
+    newColor = buttons[randomColor]
+        computer.colorPicked = buttons[randomColor]
+        console.log("the computer picked " + computer.colorPicked) 
+    // redBtn.style.backgroundColor = "white";
+    document.querySelector(allButtons).style.backgroundColor = "white"
+    console.log("function working!");
+  };
+}
+        // const randomColor = buttons[Math.floor(Math.random()* buttons.length)];
         
 
-let colorRandomizer = () => {
-  for (let i = 0; i <= buttons.length; i++) {
-    colorSeq = buttons[i]
-    let colorSeq = Math.floor(Math.random());
-    colorFlash = document.querySelector.style.backgroundColor = "white";
-    if (color == "red") {
-        redBtn.style.backgroundColor = "white";
-      button.className = button.className = "active";
-      setTimeout(() => {
-        button.className = button.className.replace("active", buttons);
-        resolve();
-      }, 1500);
-    }
-    return i;
-  }
-};
+
+
+// function factorial(color){
+//     if(color == 1 || color == 2 || color == 3 || color == 4)
+//         return randomColor(color)
+//     } 
+        
+
+// let randomColor = () => {
+//   for (let i = 0; i <= buttons.length; i++) {
+//     colorSeq = buttons[0]
+//     let colorSeq = Math.floor(Math.random()*buttons.length);
+    
+//     if (color == "red") {
+//         redBtn.style.backgroundColor = "white";
+//       button.className = button.className = "active";
+//       setTimeout(() => {
+//         button.className = button.className.replace("active", buttons);
+//         resolve();
+//       }, 1500);
+//     }
+//     return i;
+//   }
+// };
 //removeEVENTLISTEner
 //toggling buttons
 // const colorRandomizer = () => {

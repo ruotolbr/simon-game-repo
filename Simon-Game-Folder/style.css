@@ -39,8 +39,9 @@ html, body {
       box-sizing: border-box;
        
   }
-  /* .active{
-      background-color: white;  } */
+  button:active{
+      background-color: white;  } 
+      
   #redBtn {
     height: 197px;
     width: 200px;
