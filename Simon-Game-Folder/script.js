@@ -48,22 +48,37 @@ buttons[0].value = 1
 buttons[1].value = 2
 buttons[2].value = 3
 buttons[3].value = 4
-console.log(Math.floor(Math.random()* buttons.length))
-const randomColor = buttons[Math.floor(Math.random(buttons.value)* buttons.length)];
+// const randomColor = buttons[Math.floor(Math.random(buttons.value)* buttons.length)];
+// console.log(Math.floor(Math.random()* buttons.length))
+
 //Keep this ^^^ On page refresh the computer is selecting random values from buttons array! Yay :)
 document.querySelector("#begin").onclick = function (e){
     console.log(e.target)
+    const randomColor = buttons[Math.floor(Math.random(buttons.value)* buttons.length)];
+    computer.colorPicked = randomColor.value
+    console.log("the computer picked " + randomColor.value) 
+
 for (i of allButtons) {
-//   i.addEventListener("click", function (e) {
-//     alert("clicked!");
-    newColor = buttons[randomColor]
-        computer.colorPicked = buttons[randomColor]
-        console.log("the computer picked " + computer.colorPicked) 
+  i.addEventListener("click", function (e) {
+    alert("clicked!");
+    if(colorPicked.value == 1){
+        document.querySelector("#redBtn").style.backgroundColor ="white";
+        console.log("the computer picked red!")
+    }else if(colorPicked.value == 2){
+        console.log("the computer picked yellow!")
+        }else if(colorPicked.value == 3){
+            console.log("the computer picked blue!")
+        }else if(colorPicked.value ==4){
+            console.log("the computer picked green!")
+        }
+    });
+}}
+        
     // redBtn.style.backgroundColor = "white";
-    document.querySelector(allButtons).style.backgroundColor = "white"
-    console.log("function working!");
-  };
-}
+    // document.querySelector(allButtons).style.backgroundColor = "white"
+    // console.log("function working!");
+// }   };
+
         // const randomColor = buttons[Math.floor(Math.random()* buttons.length)];
         
 
