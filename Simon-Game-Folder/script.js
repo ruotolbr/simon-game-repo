@@ -45,17 +45,19 @@ buttons[1].value = 2
 buttons[2].value = 3
 buttons[3].value = 4
 console.log(buttons)
-randomColorSeq()= math.Floor(Math.Random())
+let newSeq = [];
 // const randomColor = buttons[Math.floor(Math.random(buttons.value)* buttons.length)];
 // console.log(Math.floor(Math.random()* buttons.length))
 // console.log(randomColor)
 //Keep this ^^^ On page refresh the computer is selecting random values from buttons array! Yay :)
 document.querySelector("#begin").onclick = function (button){
     // console.log(button.target) 
-    let newArray = [];
-    newArray = buttons[Math.floor(Math.random()* buttons.length)];
+    // let newArray = [];
+    numnotes = 3 //function that changes number of index in array depending on how many times play choice matches computer sequence
+ newSeq = Array(numnotes).fill(1).map( () => Math.floor(Math.random()*buttons.length))
+    console.log(newSeq)
+    newArray = buttons
     // computer.colorPicked = randomColor.value
-    console.log(newArray)
     // console.log("the computer picked " + randomColor.value); 
 
     const light = button => {
@@ -68,36 +70,39 @@ document.querySelector("#begin").onclick = function (button){
                 );
               start();       
             }, 600);
-            console.log(button)
+            // console.log(button)
         });
     };
-    const colorSeq = async () => {
-        for(let button of buttons){
-        await light(button)
-        }   
-    }; 
-    colorSeq();
-
+    const colorSeq = async (newSeq) => {
+        for(let i of newSeq){  
+          await light(buttons[i])  
+          console.log(i)
+        }
+        
+    // }   
+}; 
+    colorSeq(newSeq);
 }
+
 // // function lightUp(){
 // //     document.getElementbyId("#redBtn").replace().backgroundcolor = "white"
 const allButtons = document.querySelectorAll(".button")
 
-for (i of allButtons) {
-  i.addEventListener("click", function () {
-    alert("clicked!");
-    if(randomColor.value == 1){
-        console.log("the computer picked red!")
-    }else if(randomColor.value == 2){
-        console.log("the computer picked yellow!")
-        }else if(randomColor.value == 3){
-            console.log("the computer picked blue!")
-        }else if(randomColor.value ==4){
-            console.log("the computer picked green!")
-        }
+// for (i of allButtons) {
+//   i.addEventListener("click", function () {
+//     alert("clicked!");
+//     if(randomColor.value == 1){
+//         console.log("the computer picked red!")
+//     }else if(randomColor.value == 2){
+//         console.log("the computer picked yellow!")
+//         }else if(randomColor.value == 3){
+//             console.log("the computer picked blue!")
+//         }else if(randomColor.value ==4){
+//             console.log("the computer picked green!")
+//         }
         
-    });
-}
+//     });
+// }
     // }else if(randomColor.value == 2){
     //     document.querySelector("#yellowBtn").style.backgroundColor ="white"
     //     console.log("the computer picked yellow!")

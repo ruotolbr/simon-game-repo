@@ -4,23 +4,25 @@ body {
   text-align: center;
 }
 
-button {
+div {
   cursor: pointer;
 }
-/* #start{
+.next{
       color: black;
-      font-size: 50px;
+      background-color: grey;
+      height: 80px;
+      width: 200px;
+      border-radius: 60px 60px 150px 150px;
       position: relative;
-      padding-top: 50px;
+      border: 1px solid black;
+      box-shadow: white 0px 10px 10px 10px;
       text-align: center;
       font-family: "Anton", sans-serif;
-      padding-left: 245px;
-      letter-spacing: 10px;
 
-  } */
+  }
 #begin{
       height: 80px;
-      width: 280px;
+      width: 200px;
       border-radius: 60px 60px 150px 150px;
       color: black;
       background-color: silver;
@@ -28,8 +30,9 @@ button {
       position:relative;
       margin-left: 40px;
       margin-top: 30px;
-      border: 1px solid white;
+      border: 1px solid black;
       box-shadow: white 0px 10px 10px 10px;
+      font-family: "Anton", sans-serif;
   }
 .button:hover {
   border: 10px solid white;
