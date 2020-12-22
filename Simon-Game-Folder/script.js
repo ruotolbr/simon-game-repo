@@ -25,7 +25,7 @@ const player = {
 const computer = {
     colorPicked : null
 }
-
+const allButtons = document.querySelectorAll(".button")
 // startLevel.addEventListener("click", function () {
 // //   alert("begin!");
 //   const buttons = [redBtn, yellowBtn, blueBtn, greenBtn];
@@ -72,59 +72,56 @@ document.querySelector("#begin").onclick = function (button){
             }, 600);
             // console.log(button)
         });
+       
     };
     const colorSeq = async (newSeq) => {
         for(let i of newSeq){  
           await light(buttons[i])  
           console.log(i)
         }
+        // if (player.colorPicked === (newSeq[i]){
+        //     console.log("level up!")
+        // }else{
+        //     console.log("Rats! Try again?")
+        // }
         
     // }   
 }; 
     colorSeq(newSeq);
 }
+// document.querySelector("#nextlvl1").onclick = function(levelUp){
+    
+// } 
 
+//i want this function to take the users clicks and put them into an array. Then if user Array === newSeq console.log("Level up!"), else "try again!"
+// function trackClicks(clicks){
+//     clicks = document.querySelector("#nextlvl1");
+//     let newArray = [];
+//     newArray.push(add.value);
+// }
+//looping through all divs with the class button to check for click event
+
+for(let i = 0; i < buttons.length; i ++){
+    console.log(i)
+    buttons[i].addEventListener("click", function(value){
+    value = buttons[i].value
+    console.log("you clicked on button " + value)
+    let newArray = [];
+      newArray.push(value)
+    console.log(newArray)
+    if(newArray === newSeq){
+        //this will be a function that lights up levelup button and after user clicks on it, adds 1 to num notes in new seek, also it displays text saying congrats! 
+
+    }
+   })
+}
+// trackClicks().onclick = function(e){
+//     console.log(e.target)
+//     alert("clicked div!");
+// }
+// trackClicks();
 // // function lightUp(){
 // //     document.getElementbyId("#redBtn").replace().backgroundcolor = "white"
-const allButtons = document.querySelectorAll(".button")
-
-// for (i of allButtons) {
-//   i.addEventListener("click", function () {
-//     alert("clicked!");
-//     if(randomColor.value == 1){
-//         console.log("the computer picked red!")
-//     }else if(randomColor.value == 2){
-//         console.log("the computer picked yellow!")
-//         }else if(randomColor.value == 3){
-//             console.log("the computer picked blue!")
-//         }else if(randomColor.value ==4){
-//             console.log("the computer picked green!")
-//         }
-        
-//     });
-// }
-    // }else if(randomColor.value == 2){
-    //     document.querySelector("#yellowBtn").style.backgroundColor ="white"
-    //     console.log("the computer picked yellow!")
-    // }else if(randomColor.value == 3){
-    //     document.querySelector("#blueBtn").style.backgroundColor ="white"
-    //         console.log("the computer picked blue!")
-    // }else if(randomColor.value ==4){
-    //     document.querySelector("#greenBtn").style.backgroundColor ="white"
-    //         console.log("the computer picked green!")
-    // }
-
-
-
-
-        
-    // redBtn.style.backgroundColor = "white";
-    // document.querySelector(allButtons).style.backgroundColor = "white"
-    // console.log("function working!");
-// }   };
-
-        // const randomColor = buttons[Math.floor(Math.random()* buttons.length)];
-        
 
 
 
@@ -154,66 +151,3 @@ const allButtons = document.querySelectorAll(".button")
 //toggling buttons
 // const colorRandomizer = () => {
 
-// const colorSeq = [redBtn, yellowBtn, blueBtn, greenBtn];
-// const lightUp = button => {
-//     return new Promise((resolve, reject) => {
-//         button.className = button.className ="active";
-//         setTimeout(() => {
-//             button.className = button.className.replace("active", buttons);
-//             resolve();
-//         }, 1500);
-//     });
-// };
-// const sequencer = async () => {
-//     for (let button of colorSeq) {
-//         await lightUp(button);
-//     }
-// };
-// sequencer();
-
-// const colorRandomizer = () => {
-//     const buttons =[redBtn, yellowBtn, blueBtn, greenBtn];
-
-// return buttons[parseInt(Math.random() * buttons.length)];
-// };
-//     document.getElement("button");
-// buttonClicked.addEventListener("click", changeBtnColor, false);
-// .style.backgroundColor = colorArr[0]
-// function changeBtnColor(e){
-//     if (e.target !== e.currentTarget){
-//         let clickedBtn = e.target.id
-//     if(e.target.id == "#red"){
-//         clickedBtn.style.backgroundColor = "red"
-//     }else {
-//         if (e.target.id == "#blue", "#red", "#yellow", "#green"){
-//             clickedBtn.style.hover
-//             console.log(clickedBtn)
-//         }else{
-//             if(e.target.id == "#yellow"){
-//                 clickedBtn.style.backgroundColor = "white"
-//             }else{
-//                 if(e.target.id =="#green"){
-//                     clickedBtn.style.backgroundColor = "lime"
-//                 }
-
-//             }
-//         }
-//     }
-//         for(i=0; i < colorArr.length; i++){
-//             e.target.style.backgroundColor = "white";
-//         }
-//     }
-//    e.StopPropagation();
-// }
-// changeBtnColor(buttonClicked)
-// function clickRed() {
-//     redBtn.style.backgroundColor = "red"
-//
-// }
-
-// function changeback(){
-//     document.querySelector("#redBtn").style.backgroundColor = "firebrick"
-//     document.querySelector("#yellowBtn").style.backgroundColor = "gold"
-//     document.querySelector("#blueBtn").style.backgroundColor = "blue"
-//     document.querySelector("#greenBtn").style.backgroundColor = "green"
-// }
