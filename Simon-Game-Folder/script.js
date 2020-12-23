@@ -1,23 +1,11 @@
-// console.log("test")
 const redBtn = document.querySelector(".red");
 
-// redBtn.addEventListener("click", clickRed)
-// console.log(redBtn)
 const yellowBtn = document.querySelector(".yellow");
-// yellowBtn.addEventListener("click", clickYellow)
-// console.log(yellowBtn)
-const blueBtn = document.querySelector(".blue");
-// blueBtn.addEventListener("click", clickBlue)
-// console.log(blueBtn)
-const greenBtn = document.querySelector(".green");
-// greenBtn.addEventListener("click", clickGreen)
-// console.log(greenBtn);
-// const allButtons = document.querySelectorAll(".button");
 
-// redBtn = 1;
-// yellowBtn = 2;
-// blueBtn = 3;
-// greenBtn = 4;
+const blueBtn = document.querySelector(".blue");
+
+const greenBtn = document.querySelector(".green");
+
 const player = {
   colorPicked: null,
 };
@@ -28,7 +16,7 @@ const allButtons = document.querySelectorAll(".button");
 
 const startLevel = document.querySelector("#begin");
 startLevel.addEventListener("click", function () {
-  //   alert("begin!");
+
   document.querySelector("#start").style.color = "white";
   setTimeout(function () {
     document.querySelector("#start").style.color = "black";
@@ -44,15 +32,11 @@ buttons[3].value = 3;
 console.log(buttons);
 let newSeq = [];
 let numNotes = 3;
-// const randomColor = buttons[Math.floor(Math.random(buttons.value)* buttons.length)];
-// console.log(Math.floor(Math.random()* buttons.length))
-// console.log(randomColor)
+
 //Keep this ^^^ On page refresh the computer is selecting random values from buttons array! Yay :)
 document.querySelector("#begin").onclick = computerTurn;
 
 function computerTurn(button) {
-  // console.log(button.target)
-  // let newArray = [];
   //function that changes number of index in array depending on how many times play choice matches computer sequence
   newSeq = Array(numNotes)
     .fill(1)
@@ -81,8 +65,10 @@ function computerTurn(button) {
   colorSeq(newSeq);
 }
 
-// document.querySelector("#nextlvl1").onclick = function(levelUp){
-
+let restartButton = document.querySelector("#restartGame")
+restartButton.addEventListener("click", function (e){
+    alert("restart button clicked successfully!")
+})
 // }
 
 //i want this function to take the users clicks and put them into an array. Then if user Array === newSeq console.log("Level up!"), else "try again!"
@@ -101,24 +87,20 @@ for (let i = 0; i < buttons.length; i++) {
         if (playerArray[i] !== newSeq[i]) {
           console.log("wrong");
           isCorrect = false;
-           alert("now redirect to modal");
-          
-            
-             modal.style.display = "block";
+                     
+          if(isCorrect === false){
+              alert("wrong!")
+            document.getElementById("#modal").style.display = "block";  
+          }   
           return isCorrect;
-         
-        
-          
-           
-           
-        
       }
       if (isCorrect === true) {
         console.log("correct");
         numNotes++;
         computerTurn();
-        modal.style.display = "block";
-      }
+        // modal.style.display = "none";
+       } 
+      
       
           function nextLevel(newArray) {
             newArray = [];
@@ -134,40 +116,7 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
-//next i need to tell the computer if is correct ===true change style.color to "white"
-//     let newArray = [];
-//     newArray.push(add.value);
+
+
+
 // }
-//looping through all divs with the class button to check for click event
-// trackClicks().onclick = function(e){
-//     console.log(e.target)
-//     alert("clicked div!");
-// }
-// trackClicks();
-// // function lightUp(){
-// //     document.getElementbyId("#redBtn").replace().backgroundcolor = "white"
-
-// function factorial(color){
-//     if(color == 1 || color == 2 || color == 3 || color == 4)
-//         return randomColor(color)
-//     }
-
-// let randomColor = () => {
-//   for (let i = 0; i <= buttons.length; i++) {
-//     colorSeq = buttons[0]
-//     let colorSeq = Math.floor(Math.random()*buttons.length);
-
-//     if (color == "red") {
-//         redBtn.style.backgroundColor = "white";
-//       button.className = button.className = "active";
-//       setTimeout(() => {
-//         button.className = button.className.replace("active", buttons);
-//         resolve();
-//       }, 1500);
-//     }
-//     return i;
-//   }
-// };
-//removeEVENTLISTEner
-//toggling buttons
-// const colorRandomizer = () => {

@@ -57,32 +57,41 @@ div#greenBtn.lightup{
 	width:100vw;
 	z-index: 1;
 	overflow: auto;
-	display:none;
+  display:none;
+  
 }
 #modaltext{
   height:350; 
-	background-color: white;
+  background-color: yellow;
+  color: red;
+  -webkit-text-stroke: .5px black;
 	width:550px;
 	border-radius: 5px;
-	margin: 150px auto;
+  margin: 150px auto;
 	/*top and bottom=150px and left and right margin auto */
 	box-shadow: 20px 20px 20px rgba(0,0,0,0.2); 
 	padding: 2%;
-	line-height: 120%;
-	font-family: "Arial";
+  line-height: 120%;
+  font-family: "Anton";
+  font-size: 35px;
+  border: 5px dashed black;
 }
 #modal-footer{
-	text-align: right;
+	text-align: center;
 }
 #restartGame {
-	padding: 14px 18px;
-	background-color: #677996;
-	border: none;
+	padding: 24px 0px 20px 10px;
+	background-color: black;
+	border: 5px solid blue;
 	outline: none;
-	border-radius: 5px;
+	border-radius: 15px;
 	color: white;
-	font-family: "arial";
-	cursor: pointer;
+	font-family: "Helvetica";
+  cursor: pointer;
+  font-size: 25px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  width: 500px;
 }
 
 .button {
