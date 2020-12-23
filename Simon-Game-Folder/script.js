@@ -86,19 +86,26 @@ for (let i = 0; i < buttons.length; i++) {
       for (i = 0; i < playerArray.length; i++) {
         if (playerArray[i] !== newSeq[i]) {
           console.log("wrong");
-          isCorrect = false;
-                     
-          if(isCorrect === false){
-              alert("wrong!")
-            document.getElementById("#modal").style.display = "block";  
-          }   
-          return isCorrect;
+           modal.style.display = "block"   
+          isCorrect = false  
+          if(isCorrect = false){
+           return isCorrect
+          }else{
+              
+          }
+           
+                      
+        //       alert("wrong!")
+        //     document.getElementById("#modal").style.display = "block";  
+        //   }   
+          
+          
       }
       if (isCorrect === true) {
         console.log("correct");
         numNotes++;
         computerTurn();
-        // modal.style.display = "none";
+        ;
        } 
       
       
