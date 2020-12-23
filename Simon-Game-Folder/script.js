@@ -32,7 +32,10 @@ buttons[3].value = 3;
 console.log(buttons);
 let newSeq = [];
 let numNotes = 3;
-
+// function refreshGame(){
+//     return computerTurn()
+// }
+// let levelBtn = document.getElementById("#lvl1next")
 //Keep this ^^^ On page refresh the computer is selecting random values from buttons array! Yay :)
 document.querySelector("#begin").onclick = computerTurn;
 
@@ -66,8 +69,9 @@ function computerTurn(button) {
 }
 
 let restartButton = document.querySelector("#restartGame")
-restartButton.addEventListener("click", function (e){
-    alert("restart button clicked successfully!")
+restartButton.addEventListener("click", function (){
+    // alert("restart button clicked successfully!")
+    location.reload()  
 })
 // }
 
@@ -83,15 +87,17 @@ for (let i = 0; i < buttons.length; i++) {
     // console.log(newSeq)
     if (playerArray.length === newSeq.length) {
       let isCorrect = true;
+      
       for (i = 0; i < playerArray.length; i++) {
         if (playerArray[i] !== newSeq[i]) {
           console.log("wrong");
            modal.style.display = "block"   
           isCorrect = false  
-          if(isCorrect = false){
-           return isCorrect
-          }else{
-              
+          return isCorrect
+          
+        }
+          
+           
           }
            
                       
@@ -100,28 +106,32 @@ for (let i = 0; i < buttons.length; i++) {
         //   }   
           
           
-      }
+      
       if (isCorrect === true) {
         console.log("correct");
         numNotes++;
-        computerTurn();
-        ;
+       computerTurn()
        } 
+       while (playerArray.length > 0) {
+        playerArray.pop();
+    }
       
-      
+      console.log(playerArray)
           function nextLevel(newArray) {
             newArray = [];
+            newArray.length = 0;
             return newArray;
           }
-          let answer = newArray.reduce(nextLevel);
-          console.log(answer);
-        } if (playerArray[i] !== newSeq[i]) {
-          console.log("reset all arrays to empty");
-        }
-      playerArray = [];
-    }
-  });
-}
+        //   let answer = newArray.reduce(nextLevel);
+          console.log(playerArray);
+       } })}
+        // if (playerArray[i] !== newSeq[i]) {
+        //   console.log("reset all arrays to empty");
+        // }
+    //   playerArray = [];
+   
+//   };
+// }
 
 
 
