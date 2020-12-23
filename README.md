@@ -10,7 +10,6 @@ Here is a screenshot of Simon upon startup.
 ## Stretch Goals
 -Will be adding sounds to accompany each click on a corresponding button.  
 -Adding an API to show animations after each level.
-
 -Giving a level header to show the player what level they are on. 
 
 
