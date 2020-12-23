@@ -43,36 +43,73 @@ div#redBtn.lightup,
 div#yellowBtn.lightup,
 div#blueBtn.lightup,
 div#greenBtn.lightup{
-  background-color: white;
+  background: linear-gradient(0deg, rgba(255,255,255,1),rgb(205, 255, 254)70%);
+  border: black 5px;
+  box-shadow:rgb(81, 255, 252) 0px 0px 0px 5px;
+
 }
-/* .lightup{
-  background-color: white;
-} */
+#modal{
+  background-color:rgba(255,0,100,0.4);
+	position: fixed; 
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width:100vw;
+	z-index: 1;
+	overflow: auto;
+	display:none;
+}
+#modaltext{
+  height:350; 
+	background-color: white;
+	width:550px;
+	border-radius: 5px;
+	margin: 150px auto;
+	/*top and bottom=150px and left and right margin auto */
+	box-shadow: 20px 20px 20px rgba(0,0,0,0.2); 
+	padding: 2%;
+	line-height: 120%;
+	font-family: "Arial";
+}
+#modal-footer{
+	text-align: right;
+}
+#restartGame {
+	padding: 14px 18px;
+	background-color: #677996;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: white;
+	font-family: "arial";
+	cursor: pointer;
+}
 
 .button {
   height: 250px;
   width: 250px;
   display: inline-block;
+  /* box-shadow: inset white 0px 0px 0px 2px; */
 }
 #redBtn {
   background-color: red;
   border-radius: 0px 250px 0px 0px;
-  box-shadow: white 0px 0px 10px 2px;
+  border: 10px black;
 }
 #blueBtn {
   background-color: blue;
   border-radius: 0px 0px 250px 0px;
-  box-shadow: white 0px 0px 10px 2px;
+  
 }
 #yellowBtn {
   background-color: yellow;
   border-radius: 250px 0px 0px 0px;
-  box-shadow: white 0px 0px 10px 2px;
+
 }
 #greenBtn {
   background-color: rgb(26, 141, 26);
   border-radius: 0px 0px 0px 250px;
-  box-shadow: white 0px 0px 10px 2px;
+
 }
 #simoncirc {
     height: 170px;
