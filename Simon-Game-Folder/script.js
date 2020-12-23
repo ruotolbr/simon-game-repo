@@ -16,7 +16,6 @@ const allButtons = document.querySelectorAll(".button");
 
 const startLevel = document.querySelector("#begin");
 startLevel.addEventListener("click", function () {
-
   document.querySelector("#start").style.color = "white";
   setTimeout(function () {
     document.querySelector("#start").style.color = "black";
@@ -68,13 +67,13 @@ function computerTurn(button) {
   colorSeq(newSeq);
 }
 
-let restartButton = document.querySelector("#restartGame")
-restartButton.addEventListener("click", function (){
-    // alert("restart button clicked successfully!")
-    location.reload()  
-})
+let restartButton = document.querySelector("#restartGame");
+restartButton.addEventListener("click", function () {
+  // alert("restart button clicked successfully!")
+  location.reload();
+});
 // }
-
+let nextBtn = document.getElementById("lvl1next");
 //i want this function to take the users clicks and put them into an array. Then if user Array === newSeq console.log("Level up!"), else "try again!"
 // function trackClicks(clicks){
 //     clicks = document.querySelector("#nextlvl1");
@@ -87,53 +86,45 @@ for (let i = 0; i < buttons.length; i++) {
     // console.log(newSeq)
     if (playerArray.length === newSeq.length) {
       let isCorrect = true;
-      
+
       for (i = 0; i < playerArray.length; i++) {
         if (playerArray[i] !== newSeq[i]) {
           console.log("wrong");
-           modal.style.display = "block"   
-          isCorrect = false  
-          return isCorrect
-          
+          modal.style.display = "block";
+          isCorrect = false;
+          return isCorrect;
         }
-          
-           
-          }
-           
-                      
-        //       alert("wrong!")
-        //     document.getElementById("#modal").style.display = "block";  
-        //   }   
-          
-          
       
       if (isCorrect === true) {
         console.log("correct");
         numNotes++;
-       computerTurn()
-       } 
-       while (playerArray.length > 0) {
+        
+        modal.style.display = "block";
+        document.getElementById("modaltext").innerText = "Sick! level up.";
+        setTimeout(()=>{
+            modal.style.display = "none";
+        },2500)
+        isCorrect = true;
+        setTimeout(() =>{
+        computerTurn()
+        
+      }, 3500);
+      while (playerArray.length > 0) {
         playerArray.pop();
-    }
+      }
+
+      console.log(playerArray);
+       
       
-      console.log(playerArray)
-          function nextLevel(newArray) {
-            newArray = [];
-            newArray.length = 0;
-            return newArray;
-          }
-        //   let answer = newArray.reduce(nextLevel);
-          console.log(playerArray);
-       } })}
-        // if (playerArray[i] !== newSeq[i]) {
-        //   console.log("reset all arrays to empty");
-        // }
-    //   playerArray = [];
-   
-//   };
+
+      console.log(playerArray);
+    }}
+  playerArray = [];
+}});
+}
+ 
+
+ 
 // }
-
-
-
 
 // }
