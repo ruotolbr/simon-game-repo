@@ -114,8 +114,12 @@ for (let i = 0; i < buttons.length; i++) {
       console.log(playerArray);
     }}
   playerArray = [];
-}});
 }
+}
+  })
+}
+  
+
  
 
  
