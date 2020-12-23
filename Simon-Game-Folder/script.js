@@ -31,10 +31,6 @@ buttons[3].value = 3;
 console.log(buttons);
 let newSeq = [];
 let numNotes = 3;
-// function refreshGame(){
-//     return computerTurn()
-// }
-// let levelBtn = document.getElementById("#lvl1next")
 //Keep this ^^^ On page refresh the computer is selecting random values from buttons array! Yay :)
 document.querySelector("#begin").onclick = computerTurn;
 
