@@ -6,37 +6,6 @@ I chose Simon because it is engaging and relies on a players memory. Unlike many
 Here is a screenshot of Simon upon startup.
 [Alt text](https://imgur.com/JIoxKcE "Simon Startup")
 ## Code Snippet 
-const redBtn = document.querySelector(".red");
-
-const yellowBtn = document.querySelector(".yellow");
-
-const blueBtn = document.querySelector(".blue");
-
-const greenBtn = document.querySelector(".green");
-
-const allButtons = document.querySelectorAll(".button");
-
-const startLevel = document.querySelector("#begin");
-startLevel.addEventListener("click", function () {
-  document.querySelector("#start").style.color = "white";
-  setTimeout(function () {
-    document.querySelector("#start").style.color = "black";
-  }, 3000);
-});
-let modal = document.querySelector("#modal");
-const buttons = [redBtn, yellowBtn, blueBtn, greenBtn];
-
-buttons[0].value = 0;
-buttons[1].value = 1;
-buttons[2].value = 2;
-buttons[3].value = 3;
-console.log(buttons);
-let newSeq = [];
-let numNotes = 3;
-
-//Keep this ^^^ On page refresh the computer is selecting random values from buttons array! Yay :)
-document.querySelector("#begin").onclick = computerTurn;
-
 function computerTurn(button) {
   //function that changes number of index in array depending on how many times play choice matches computer sequence
   newSeq = Array(numNotes)
@@ -65,12 +34,6 @@ function computerTurn(button) {
   };
   colorSeq(newSeq);
 }
-let restartButton = document.querySelector("#restartGame");
-restartButton.addEventListener("click", function () {
-  // alert("restart button clicked successfully!")
-  location.reload();
-});
-// }
 let nextBtn = document.getElementById("lvl1next");
 // function trackClicks(clicks){
 //     clicks = document.querySelector("#nextlvl1");
