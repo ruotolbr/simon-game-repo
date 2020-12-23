@@ -6,13 +6,13 @@ I chose Simon because it is engaging and relies on a players memory. Unlike many
 Here is a screenshot of Simon upon startup.
 [Alt text](https://imgur.com/JIoxKcE "Simon Startup")
 ## Code Snippet 
-function computerTurn(button) {
-  //function that changes number of index in array depending on how many times play choice matches computer sequence
-  newSeq = Array(numNotes)
-    .fill(1)
-    .map(() => Math.floor(Math.random() * buttons.length));
-  console.log(newSeq);
-  newArray = buttons;
+-function computerTurn(button) {
+-//function that changes number of index in array depending on how many times play choice matches computer sequence
+  -newSeq = Array(numNotes)
+    -.fill(1)
+    -.map(() => Math.floor(Math.random() * buttons.length));
+  -console.log(newSeq);
+ -newArray = buttons;
 
   const light = (button) => {
     return new Promise((start, finish) => {
