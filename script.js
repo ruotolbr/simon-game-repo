@@ -6,12 +6,6 @@ const blueBtn = document.querySelector(".blue");
 
 const greenBtn = document.querySelector(".green");
 
-const player = {
-  colorPicked: null,
-};
-const computer = {
-  colorPicked: null,
-};
 const allButtons = document.querySelectorAll(".button");
 
 const startLevel = document.querySelector("#begin");
@@ -95,7 +89,6 @@ for (let i = 0; i < buttons.length; i++) {
       if (isCorrect === true) {
         console.log("correct");
         numNotes++;
-        
         modal.style.display = "block";
         document.getElementById("modaltext").innerText = "Sick! level up.";
         setTimeout(()=>{
